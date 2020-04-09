@@ -1,0 +1,44 @@
+import java.util.*;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner cin = new Scanner(System.in);
+        int X1 = cin.nextInt();
+        int Y1 = cin.nextInt();
+        int X2 = cin.nextInt();
+        int Y2 = cin.nextInt();
+        Point a = new Point();
+        Point b = new Point();
+        a.setX(X1);
+        a.setY(Y1);
+        b.setX(X1);
+        b.setY(Y1);
+        double dist;
+        dist = Math.sqrt(Math.pow(X1 - X2, 2) + Math.pow(Y1 - Y2, 2));
+        System.out.println(dist);
+    }
+}
+class Point {
+    protected int X;
+    protected int Y;
+
+    public Point() {
+    }
+
+    public int getX() {
+        return X;
+    }
+
+    public void setX(int x1) {
+        this.X = x1;
+    }
+
+    public int getY() {
+        return Y;
+    }
+
+    public void setY(int y1) {
+        this.Y = y1;
+    }
+
+}
