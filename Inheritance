@@ -1,0 +1,70 @@
+class BadStudent extends Employee {
+    double lowScholarship = 500;
+
+    public double getLowScholarship() {
+        return lowScholarship;
+    }
+
+    public void setLowScholarship(double lowScholarship) {
+        this.lowScholarship = lowScholarship;
+    }
+}
+class ExcellentStudent extends Student{
+    double highScholarship = 200200;
+
+    public double getHighScholarship() {
+        return highScholarship;
+    }
+    public void setHighScholarship(double highScholarship) {
+        this.highScholarship = highScholarship;
+    }
+}
+class Student extends Employee {
+    double scholarship = 10000;
+    public double getScholarship() {
+        return scholarship;
+    }
+    public void setScholarship(double scholarship) {
+        this.scholarship = scholarship;
+    }
+
+}
+class Employee {
+    String Fname = "Almat";
+    String Lname ="Amirseitov";
+    double msalary = 1000;
+
+    public void setFname(String Fname){
+        this.Fname = Fname;
+    }
+
+    public void setLname(String Lname){
+        this.Lname = Lname;
+    }
+
+    public void setMsalary(double msalary){
+        this.msalary = msalary;
+    }
+
+    public String getFname(){
+        return Fname;
+    }
+
+    public String getLname(){
+        return Lname;
+    }
+
+    public double getMsalary(){
+        return msalary;
+    }
+
+}
+public class Main {
+
+    public static void main(String[] args) {
+        ExcellentStudent a = new ExcellentStudent();
+        BadStudent b = new BadStudent();
+        System.out.println(a.getHighScholarship()+" ,"+a.getMsalary());
+        System.out.println(b.getLowScholarship() +" ,"+b.getMsalary());
+    }
+}
